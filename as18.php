@@ -4,7 +4,7 @@ echo "<a target='_blank' href='https://github.com/AustinRippee/api.git'>GitHub r
 
 main();
 
-function main () {
+function main ()) {
 	
 	$apiCall = 'https://api.covid19api.com/summary';
 	$json_string = curl_get_contents($apiCall);

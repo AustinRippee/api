@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 	filename 	: cis355api.php
 	author   	: george corser
