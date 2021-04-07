@@ -4,7 +4,7 @@ echo "<a target='_blank' href='https://github.com/AustinRippee/api.git'>GitHub r
 
 main();
 
-function main ()) {
+function main () {
 	
 	$apiCall = 'https://api.covid19api.com/summary';
 	$json_string = curl_get_contents($apiCall);
@@ -19,6 +19,8 @@ function main ()) {
     array_multisort($arr2, SORT_DESC, $arr1);
     print_r($arr1);
 }
+
+//country_usa = JSON.parse(this.responseText).Countries[170].NewDeaths;
 #-----------------------------------------------------------------------------
 // read data from a URL into a string
 function curl_get_contents($url) {
