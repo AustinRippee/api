@@ -43,6 +43,10 @@ function main () {
     print_r($arr1);
 }
 
+$death_arr = array_slice($death_arr,0,10); //  top 10 highest number of deaths.
+//print_r($death_arr);
+$JSONString=json_encode($death_arr);
+$JSONObject = json_decode($JSONString);
 echo '<b>Filtered JSON Object From $death_arr</b><br>';
 	echo var_dump($JSONObject);
 	echo '<br><br>';
