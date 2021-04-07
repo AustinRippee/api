@@ -28,19 +28,46 @@
 main();
 
 function main () {
-	
 	$apiCall = 'https://api.covid19api.com/summary';
+
+	//gather into an array all countries’ deaths data
 	$json_string = curl_get_contents($apiCall);
 	$obj = json_decode($json_string);
+	
+	$death_arr = Array() ;
 
-    $arr1 = Array();
-    $arr2 = Array();
-    foreach($obj->Countries as $i) {
-        array_push($arr1, $i->Country);
-        array_push($arr2, $i->TotalDeaths);
-    }
-    array_multisort($arr2, SORT_DESC, $arr1);
-    print_r($arr1);
+	foreach($obj->Countries as $i){
+		$death_arr[$i->Country] = $i->TotalDeaths;
+	}
+
+	//sort array in Desecending order 
+	arsort($death_arr);
+
+	// echo html head section
+	echo '<html>';
+	echo '<head>';
+	echo '<title>COVID-19 API by Binh Dang</title>';
+	echo '<style>';
+	echo "table, th, td {
+			border: 1px solid black;
+	  	}";
+	echo '</style>';
+	echo '</head>';
+	
+	// open html body section
+	echo '<body onload="loadDoc()">';
+	// $apiCall = 'https://api.covid19api.com/summary';
+	// $json_string = curl_get_contents($apiCall);
+	// $obj = json_decode($json_string);
+
+    // $arr1 = Array();
+    // $arr2 = Array();
+    // foreach($obj->Countries as $i) {
+    //     array_push($arr1, $i->Country);
+    //     array_push($arr2, $i->TotalDeaths);
+    // }
+    // array_multisort($arr2, SORT_DESC, $arr1);
+    // print_r($arr1);
 
     $death_arr = array_slice($death_arr,0,10); //  top 10 highest number of deaths.
 //print_r($death_arr);
