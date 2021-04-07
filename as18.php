@@ -41,9 +41,8 @@ function main () {
     }
     array_multisort($arr2, SORT_DESC, $arr1);
     print_r($arr1);
-}
 
-$death_arr = array_slice($death_arr,0,10); //  top 10 highest number of deaths.
+    $death_arr = array_slice($death_arr,0,10); //  top 10 highest number of deaths.
 //print_r($death_arr);
 $JSONString=json_encode($death_arr);
 $JSONObject = json_decode($JSONString);
@@ -68,6 +67,9 @@ echo '<b>Filtered JSON Object From $death_arr</b><br>';
 		 }
 	echo "</table>";
 	echo '</div>';
+}
+
+
 
 //country_usa = JSON.parse(this.responseText).Countries[170].NewDeaths;
 #-----------------------------------------------------------------------------
