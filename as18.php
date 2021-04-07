@@ -43,6 +43,28 @@ function main () {
     print_r($arr1);
 }
 
+echo '<b>Filtered JSON Object From $death_arr</b><br>';
+	echo var_dump($JSONObject);
+	echo '<br><br>';
+	echo "<div><b>Table With PHP Array</b>";
+	echo "<table>";
+        echo "<tr>";
+		  	echo "<th>PHP</th>";
+            echo "<th>Country</th>";
+            echo "<th>Total Death Cases</th>";
+		echo "</tr>";
+		$i=1;
+		foreach ($death_arr as $country => $cases) {
+			echo "<tr>";
+			echo "<td>{$i}</td>";
+			echo "<td>{$country}</td>";
+			echo "<td>{$cases}</td>";
+			echo "</tr>";
+			$i++;
+		 }
+	echo "</table>";
+	echo '</div>';
+
 //country_usa = JSON.parse(this.responseText).Countries[170].NewDeaths;
 #-----------------------------------------------------------------------------
 // read data from a URL into a string
