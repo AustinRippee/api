@@ -1,7 +1,7 @@
 <DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>Persons List</title>
+        <title>As18 - Covid-19 Deaths</title>
         <meta charset="hutf-8" />
         <!-- Latest compiled and minified Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -15,11 +15,12 @@
         <?php
         // show page header
         echo "<div class='page-header'>
-                <h1>Persons List</h1>
-                <h5 style='color:grey;'>CRUD Applet with Login Created by Austin Rippee</h5>
+                <h1>As18 - Covid-19 Deaths</h1>
+                <h5 style='color:grey;'>Created by Austin Rippee</h5>
+                <a href='https://github.com/AustinRippee/api.git'>Link to the GitHub Source Code </a>
             </div>";
         ?>
-             <a href="https://github.com/AustinRippee/api.git">Link to the GitHub Source Code </a>
+             
              
 <?php
 // Covid19api.com deaths data
